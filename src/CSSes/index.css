@@ -61,12 +61,21 @@ main {
   overflow: hidden auto;
   z-index: 1;
   box-shadow: -10px 30px 60px hsla(0, 0%, 0%, 0.2);
+  animation: main-anim 2s ease-in-out 1s both;
 }
 
 @media screen and (max-width: 850px) {
   main {
     width: 85.4166666667%;
     height: 58.3333333333%;
+  }
+}
+@keyframes main-anim {
+  0% {
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 0, 90deg);
   }
 }
 header {
@@ -120,4 +129,52 @@ section .stats div p {
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+
+@keyframes top-anim {
+  0% {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
+section *:nth-child(1) {
+  animation: top-anim 1s ease-in-out 2.5s both;
+}
+
+section *:nth-child(2) {
+  animation: top-anim 1s ease-in-out 3s both;
+}
+
+section *:nth-child(3) {
+  animation: top-anim 1s ease-in-out 3.5s both;
+}
+
+@keyframes stat-anim {
+  0% {
+    position: relative;
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
+.stats div:nth-child(1) {
+  animation: stat-anim 1s ease-in-out 3.5s both;
+}
+
+.stats div:nth-child(2) {
+  animation: stat-anim 1s ease-in-out 4s both;
+}
+
+.stats div:nth-child(3) {
+  animation: stat-anim 1s ease-in-out 4.5s both;
 }/*# sourceMappingURL=index.css.map */

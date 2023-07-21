@@ -55,3 +55,41 @@ section {
     }
   }
 }
+
+@keyframes top-anim {
+  0% {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 3 {
+  section *:nth-child(#{$i}) {
+    animation: top-anim 1s ease-in-out #{calc($i/2) + 2}s both;
+  }
+}
+
+@keyframes stat-anim {
+  0% {
+    position: relative;
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@for $i from 1 through 3 {
+  .stats div:nth-child(#{$i}) {
+    animation: stat-anim 1s ease-in-out #{calc($i/2) + 3}s both;
+  }
+}

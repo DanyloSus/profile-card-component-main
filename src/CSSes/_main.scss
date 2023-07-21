@@ -19,11 +19,22 @@ main {
   z-index: 1;
 
   box-shadow: -10px 30px 60px hsla(0, 0%, 0%, 0.2);
+
+  animation: main-anim 2s ease-in-out 1s both;
 }
 
 @media screen and (max-width: 850px) {
   main {
     width: $mobile-width;
     height: $mobile-height;
+  }
+}
+
+@keyframes main-anim {
+  0% {
+    transform: translate(-50%, -50%) rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate3d(0, 0, 0, 90deg);
   }
 }
