@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  height: calc(100vh / 12vh) * 2.25vh;
+
+  img {
+    width: 100%;
+    height: calc(100vh / 12vh) * 2.25vh;
+
+    object-fit: cover;
+  }
+}

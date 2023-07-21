@@ -6,6 +6,12 @@ $dark-grayish-blue: hsl(227, 10%, 46%);
 
 $dark-gray: hsl(0, 0%, 59%);
 
+$width: calc(100% / 12%) * 3%;
+$height: calc(100% / 12%) * 6.25%;
+
+$mobile-width: calc(100% / 12%) * 10.25%;
+$mobile-height: calc(100% / 12%) * 7%;
+
 :root {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
@@ -24,15 +30,33 @@ body {
   overflow: hidden;
 }
 
+h2 {
+  color: $very-dark-desaturated-blue;
+}
+
+p {
+  color: $dark-grayish-blue;
+}
+
 .img {
   position: absolute;
 }
 .lt {
-  left: -25%;
-  top: -75%;
+  left: -20%;
+  top: -65%;
+}
+.rt {
+  right: -15%;
+  bottom: -85%;
 }
 
-.rt {
-  right: -25%;
-  bottom: -75%;
+@media screen and (max-width: 850px) {
+  .lt {
+    left: -190%;
+    top: -85%;
+  }
+  .rt {
+    right: -155%;
+    bottom: -105%;
+  }
 }
